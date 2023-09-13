@@ -1,0 +1,56 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    margin: auto;
+}
+
+.textHolder{
+    width: 100%;
+    float: left;
+    text-align: center;
+    background-color: #70A7DF;
+    height: 150px;
+}
+
+.imageHolder{
+    width: 100%;
+    float: left;
+    height: 125px;
+}
+
+.imageHolder img{
+    width: 100%;
+    height: 100%;
+}
+
+#clear{
+    clear: both;
+}
+
+.bottom {
+    overflow: hidden;
+}
+
+.bottomImageHolder{
+    height: 525px;
+    float: left;
+    width: 75%;
+}
+
+.bottomImageHolder img{
+    width: 100%;
+    height: 100%;
+}
+
+.bottomTextHolder{
+    background-color: #93B071;
+    height: 525px;
+    float: right;
+    width: 25%;
+    text-align: center;
+}
+
+.bottomTextHolder h1{
+    margin-top: 150px;
+}
+
