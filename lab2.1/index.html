@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Булботка Надія IK-02">
+    <title>Task1_Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="myForm">
+        <h1 class="header">Форма для заповнення📝</h1>
+        <br>
+
+        <label for="pib">ПІБ:</label>
+        <input type="text" id="pib" name="pib" required placeholder="ТТТТТТ Т.Т.">
+        <br>
+
+        <label for="variant">Варіант:</label>
+        <input type="text" id="variant" name="variant" required placeholder="ЧЧ">
+        <br>
+
+        <label for="group">Група:</label>
+        <input type="text" id="group" name="group" required placeholder="ТТ-ЧЧ">
+        <br>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="(ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ">
+        <br>
+
+        <label for="idCard">ID-card:</label>
+        <input type="text" id="idCard" name="idCard" required placeholder="№ЧЧЧЧЧЧ">
+        <br>
+
+        <div id="submitButton">
+            <button type="submit">Відправити</button>
+        </div>
+
+        <div id="result"></div>
+
+        <script src="script.js"></script>
+    </form>
+</body>
+</html>
