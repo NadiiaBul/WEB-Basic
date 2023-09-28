@@ -1,0 +1,54 @@
+body{
+    background-color: #FDCEDF;
+    font-family: 'Neucha', cursive;
+}
+
+#userList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    list-style: none; 
+    padding: 0; 
+    gap: 20px;
+}
+
+.user-card {
+    width: calc(20% - 20px); 
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #f9c4b2; 
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); 
+    border-radius: 12px;
+    box-sizing: border-box;
+    text-align: left; 
+}
+
+.user-card img {
+    max-width: 100%; 
+    margin: 0 auto; 
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+button, input[type="number"] {
+    padding: 10px;
+    border: none;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #FF2171;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF7B9B;
+}
+
+input[type="number"] {
+    width: 50px;
+}
