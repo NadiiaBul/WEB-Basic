@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background-image: url('../images/flower.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: table;
+    table-layout: fixed;
+    word-wrap: break-word;
+    padding: 10px;
+    width: auto;
+    border-bottom-left-radius: 0;
+}
+
+#messageInputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4cfd8d4;
+}
+
+#nameInput {
+    flex: 1;
+    padding: 5px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+#messageInput {
+    flex: 3;
+    width: 60%;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+#sendButton {
+    padding: 10px 60px;
+    background-color: #FF2171;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#sendButton:hover {
+    background-color: #FF7B9B;
+}

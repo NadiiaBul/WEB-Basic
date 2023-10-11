@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Булботка Надія IK-02">
+    <title>Real Time Chat App</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Philosopher&family=Sofia+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+    <ul id="messages"></ul>
+    <div id="messageInputContainer">
+        <input id="nameInput" autocomplete="off" placeholder="Ваше ім'я" />
+        <input id="messageInput" autocomplete="off" placeholder="Введіть повідомлення" />
+        <button id="sendButton" onclick="sendMessage()">Надіслати</button>
+    </div>
+</div>   
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      var userColor = getRandomColor();
+      console.log(userColor);
+
+      function sendMessage() {
+        var name = document.getElementById('nameInput').value;
+        var message = document.getElementById('messageInput').value;
+
+        if (name === '') {
+          alert("Будь ласка, введіть своє ім'я.");
+          return;
+        }
+        if (message === '') {
+          alert("Будь ласка, введіть своє повідомлення.");
+          return;
+        }
+
+        socket.emit('chat message', { name: name, message: message, color: userColor });
+        document.getElementById('messageInput').value = '';
+        return false;
+      }
+
+      socket.on('chat message', function(data) {
+        var ul = document.getElementById('messages');
+        var li = document.createElement('li');
+        li.className = 'message';
+        console.log(data.color);
+        console.log(data);
+        li.style.color = data.color;
+        li.style.listStyleType = 'none';
+        li.style.marginLeft = 5;
+        console.log(data.name);
+        li.appendChild(document.createTextNode(data.name + ': ' + data.message));
+        ul.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
